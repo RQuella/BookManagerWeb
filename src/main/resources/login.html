@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+<!-- Begin Head -->
+
+<head>
+    <title>图书管理系统 - 登录</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="MobileOptimized" content="320">
+    <!--Start Style -->
+    <link rel="stylesheet" type="text/css" href="static/css/login.css">
+</head>
+<body>
+<form method="post" action="login">
+    <div class="box">
+        <h2>图书馆管理系统登录</h2>
+        <p th:unless="${failure}" style="color: white">请输入用户名和密码进行登录</p>
+        <p th:if="${failure}" style="color: red">您的用户名或密码输入不正确</p>
+        <div class="input-box">
+            <label>账号</label>
+            <input type="text" name="username"/>
+        </div>
+
+        <div class="input-box">
+            <label>密码</label>
+            <input type="password" name="password"/>
+        </div>
+
+        <div class="btn-box">
+            <a href="#">忘记密码？</a>
+            <div>
+                <button>登录</button>
+                <button>注册</button>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+
+</html>
